@@ -1,3 +1,9 @@
+repositories {
+   flatDir {
+       dirs 'libs'
+   }
+}
+
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
@@ -17,6 +23,7 @@ dependencies {
 	compile project(":EmployeeServiceContract")
 	compile project(":EmployeeRepositoryService")
 	compile project(":SpringREST")
+	compile files('libs/sqljdbc42.jar')
 }
 
 sourceSets {
