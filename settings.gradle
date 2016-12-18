@@ -1,0 +1,4 @@
+include ":EmployeeRepositoryService"
+include ":EmployeeServiceContract"
+include ":SpringREST"
+include ":SimpleSpringRestWAR"
