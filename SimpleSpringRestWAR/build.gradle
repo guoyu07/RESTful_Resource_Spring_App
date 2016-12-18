@@ -36,6 +36,7 @@ sourceSets {
 	
 }
 
+
 //For Eclipse IDE only
 eclipse {
 
@@ -43,7 +44,7 @@ eclipse {
     component {
 
       //define context path, default to project folder name
-      contextPath = 'spring4'
+      contextPath = 'spring4AAA'
 
     }
 

@@ -37,17 +37,3 @@ sourceSets {
 	}
 	
 }
-
-//For Eclipse IDE only
-eclipse {
-
-  wtp {
-    component {
-
-      //define context path, default to project folder name
-      contextPath = 'spring4AAA'
-
-    }
-
-  }
-}
