@@ -1,0 +1,53 @@
+repositories {
+   
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+
+// JDK 8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	compile 'org.springframework:spring-webmvc:4.3.2.RELEASE'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.5'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.5'
+	compile project(":EmployeeServiceContract")
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src'
+		}
+		resources {
+            srcDir 'src'
+        }
+	}
+	test {
+		java {
+		srcDir 'test'
+		}
+	}
+	
+}
+
+//For Eclipse IDE only
+eclipse {
+
+  wtp {
+    component {
+
+      //define context path, default to project folder name
+      contextPath = 'spring4AAA'
+
+    }
+
+  }
+}
