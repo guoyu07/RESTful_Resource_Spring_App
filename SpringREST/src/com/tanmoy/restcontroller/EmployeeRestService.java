@@ -3,6 +3,7 @@ package com.tanmoy.restcontroller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -24,7 +25,8 @@ import com.tanmoy.employee.service.EmployeeService;
 @RequestMapping("/employee")
 public class EmployeeRestService {
 	
-	@Autowired
+	@Autowired(required=true)
+	@Qualifier("employeeService")
 	EmployeeService employeeService;
 	
 	@RequestMapping(method=RequestMethod.GET)

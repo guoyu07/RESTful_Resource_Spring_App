@@ -10,7 +10,7 @@ import com.tanmoy.employee.dto.Employee;
 import com.tanmoy.employee.service.EmployeeService;
 
 
-@Service
+@Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired(required=true)
