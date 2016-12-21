@@ -29,6 +29,10 @@ public class EmployeeRestService {
 	@Qualifier("employeeService")
 	EmployeeService employeeService;
 	
+	public void setEmployeeService(EmployeeService employeeService) {
+		this.employeeService = employeeService;
+	}
+
 	@RequestMapping(method=RequestMethod.GET)
 	public String ping(){
 		return "OK";
