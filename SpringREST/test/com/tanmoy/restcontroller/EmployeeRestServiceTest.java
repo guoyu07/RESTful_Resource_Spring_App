@@ -19,10 +19,10 @@ import com.tanmoy.restcontroller.EmployeeRestService;
 public class EmployeeRestServiceTest {
 
 	@InjectMocks
-	EmployeeRestService test; // class under test
+	EmployeeRestService test; // Component under test
 
 	@Mock
-	EmployeeService employeeService; // dependency
+	EmployeeService employeeService; // dependency component
 
 	@Before
 	public void setUp() {
