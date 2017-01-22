@@ -23,8 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee getEmployeeById(long empid) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getEmployeeById(empid);
 	}
 
 }

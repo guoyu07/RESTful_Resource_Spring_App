@@ -55,14 +55,16 @@ public class EmployeeRestService {
 	//READ
 	@RequestMapping(value="/{loginId}",method=RequestMethod.GET,produces="application/json")
 	public Employee getEmployee(
-		@PathVariable(value="loginId")	String extrnId
+		@PathVariable(value="loginId")	long extrnId
 			){
-		Employee emp1=new Employee();
-		emp1.setNationalIDNumber(extrnId);
-		emp1.setEmployeeName("Tanmoy");
+		Employee emp1;
+		/*emp1.setNationalIDNumber(extrnId);
+		emp1.setEmployeeName("Tanmoy");*/
+		
+		emp1=employeeService.getEmployeeById(extrnId);
 		
 		if(emp1==null){
-			throw new EmployeeNotFoundException(0);
+			throw new EmployeeNotFoundException(extrnId);
 		}
 		return emp1;
 	}
