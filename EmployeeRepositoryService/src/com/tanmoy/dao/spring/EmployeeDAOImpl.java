@@ -43,7 +43,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		 * Map<String,Object> map=new HashMap<String,Object>();
 		 * map.put("loginid",empId);
 		 */ /* you can use map instead of SqlParameterSource */
-		SqlParameterSource namedParameters = new MapSqlParameterSource("loginid", empId);
+		MapSqlParameterSource namedParameters = new MapSqlParameterSource();
+		namedParameters.addValue("loginid", empId);
+		
 		try {
 			empl = jdbcOperation.queryForObject(sqlGetEmployeeByID, namedParameters, employeeMapper);
 			return empl;
