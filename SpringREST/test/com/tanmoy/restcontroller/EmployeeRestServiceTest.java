@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import com.tanmoy.employee.dto.Employee;
@@ -23,6 +24,8 @@ public class EmployeeRestServiceTest {
 
 	@Mock
 	EmployeeService employeeService; // dependency component
+	
+	private static final long TEST_USER_ID=123L;
 
 	@Before
 	public void setUp() {
@@ -46,5 +49,27 @@ public class EmployeeRestServiceTest {
 		assertEquals(expected, result);
 
 	}
+	
+	@Test(expected=EmployeeNotFoundException.class)
+	public void getAllEmployees_throws_EmployeeNotFoundException_if_null() {
+		when(employeeService.getEmployees()).thenReturn(null);
+		test.getAllEmployees();
+	}
 
+	@Test
+	public void getEmployeeById_returns_resultFromService() {
+		Employee emp=new Employee();
+		when(employeeService.getEmployeeById(Mockito.anyLong())).thenReturn(emp);
+
+		Employee result = test.getEmployee(TEST_USER_ID);
+
+		assertEquals(emp, result);
+	}
+	
+	@Test(expected=EmployeeNotFoundException.class)
+	public void getEmployeeById_throws_EmployeeNotFoundException_if_null() {
+		when(employeeService.getEmployeeById(Mockito.anyLong())).thenReturn(null);
+
+		test.getEmployee(TEST_USER_ID);
+	}
 }
