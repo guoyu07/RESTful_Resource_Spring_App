@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="sqlGetEmployeeByID" class="java.lang.String">
+		<constructor-arg type="java.lang.String" value="select e.LoginID as loginID, e.BusinessEntityID as businessEntityID, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as employeeName, e.NationalIDNumber as nationalIDNumber, e.JobTitle as jobTitle, e.BirthDate as birthDate, e.MaritalStatus as maritalStatus, e.Gender as gender, e.HireDate as hireDate from HumanResources.Employee e, Person.Person p where e.BusinessEntityID = p.BusinessEntityID and e.NationalIDNumber = :loginid"/>
+	</bean>
+
+</beans>

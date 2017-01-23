@@ -24,10 +24,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			+ "e.JobTitle,e.BirthDate,e.MaritalStatus,e.Gender,e.HireDate from HumanResources.Employee e,Person.Person p "
 			+ "where e.BusinessEntityID=p.BusinessEntityID";
 
-	private static final String GET_AN_EMPLOYEE_BY_USERID = "select e.LoginID as loginID,e.BusinessEntityID as businessEntityID,"
-			+ "concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as employeeName,e.NationalIDNumber as nationalIDNumber,e.JobTitle as jobTitle,"
-			+ "e.BirthDate as birthDate,e.MaritalStatus as maritalStatus ,e.Gender as gender	,e.HireDate as hireDate from HumanResources.Employee e,"
-			+ "Person.Person p where e.BusinessEntityID=p.BusinessEntityID and e.NationalIDNumber=:loginid";
+	@Autowired(required = true) /* Find the SQL in SQLContext.xml as a bean*/
+	private String sqlGetEmployeeByID ;
 
 	private RowMapper<Employee> employeeMapper = new BeanPropertyRowMapper<Employee>(Employee.class);
 
@@ -47,7 +45,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		 */ /* you can use map instead of SqlParameterSource */
 		SqlParameterSource namedParameters = new MapSqlParameterSource("loginid", empId);
 		try {
-			empl = jdbcOperation.queryForObject(GET_AN_EMPLOYEE_BY_USERID, namedParameters, employeeMapper);
+			empl = jdbcOperation.queryForObject(sqlGetEmployeeByID, namedParameters, employeeMapper);
 			return empl;
 		} catch (EmptyResultDataAccessException e) {
 			return null;

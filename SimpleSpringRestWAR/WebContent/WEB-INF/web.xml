@@ -8,6 +8,7 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>
        		 classpath*:META-INF/applicationContext.xml
+       		 classpath*:META-INF/SQLContext.xml
     	</param-value>
   </context-param>
   <servlet>
