@@ -25,7 +25,7 @@ public class EmployeeRestServiceTest {
 	@Mock
 	EmployeeService employeeService; // dependency component
 	
-	private static final long TEST_USER_ID=123L;
+	private static final long TEST_EMPLOYEE_ID=123L;
 
 	@Before
 	public void setUp() {
@@ -61,7 +61,7 @@ public class EmployeeRestServiceTest {
 		Employee emp=new Employee();
 		when(employeeService.getEmployeeById(Mockito.anyLong())).thenReturn(emp);
 
-		Employee result = test.getEmployee(TEST_USER_ID);
+		Employee result = test.getEmployee(TEST_EMPLOYEE_ID);
 
 		assertEquals(emp, result);
 	}
@@ -70,6 +70,6 @@ public class EmployeeRestServiceTest {
 	public void getEmployeeById_throws_EmployeeNotFoundException_if_null() {
 		when(employeeService.getEmployeeById(Mockito.anyLong())).thenReturn(null);
 
-		test.getEmployee(TEST_USER_ID);
+		test.getEmployee(TEST_EMPLOYEE_ID);
 	}
 }
