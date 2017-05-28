@@ -10,17 +10,5 @@
 	<classpathentry kind="var" path="3PTY_LOCATION/spring-context-4.3.2.RELEASE.jar"/>
 	<classpathentry kind="var" path="3PTY_LOCATION/spring-core-4.3.2.RELEASE.jar"/>
 	<classpathentry kind="var" path="3PTY_LOCATION/spring-expression-4.3.2.RELEASE.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/commons-logging-1.2.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/junit-4.11.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/mockito-all-1.10.19.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/spring-context-support-4.3.2.RELEASE.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/jackson-annotations-2.8.0.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/jackson-core-2.8.5.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/jackson-databind-2.8.5.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/mockito-core-1.10.19.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/spring-web-4.3.2.RELEASE.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/spring-webmvc-4.3.2.RELEASE.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/sqljdbc42.jar"/>
-	<classpathentry kind="var" path="3PTY_LOCATION/quartz-2.2.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
