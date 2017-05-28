@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 	
+	compile project(":AuthModule")
 	compile project(":EmployeeServiceContract")
 	compile project(":EmployeeRepositoryService")
 	compile project(":SpringREST")
