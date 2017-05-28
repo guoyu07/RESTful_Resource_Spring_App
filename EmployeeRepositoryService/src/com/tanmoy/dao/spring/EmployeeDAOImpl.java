@@ -3,6 +3,7 @@ package com.tanmoy.dao.spring;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.RowMapper;
@@ -16,6 +17,7 @@ import com.tanmoy.employee.dto.Employee;
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
 
+	@Qualifier("jdbcTemplate1")
 	@Autowired(required = true)
 	private NamedParameterJdbcOperations jdbcOperation;
 

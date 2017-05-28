@@ -23,6 +23,9 @@ dependencies {
 	compile project(":EmployeeServiceContract")
 	compile project(":EmployeeRepositoryService")
 	compile project(":SpringREST")
+	compile project(":SimpleRepositoryServiceContract")
+	compile project(":SimpleRepositoryService")
+	compile project(":QuartzJobSchedulerService")
 	compile files('libs/sqljdbc42.jar')
 }
 
