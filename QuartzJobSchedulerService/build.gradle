@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+
+// JDK 8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.3'
+	compile group: 'org.springframework', name: 'spring-core', version: '4.3.2.RELEASE'
+	compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.2.RELEASE'
+	compile group: 'org.springframework', name: 'spring-tx', version: '4.3.2.RELEASE'
+	compile project(":SimpleRepositoryServiceContract")
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src'
+		}
+		resources {
+            srcDir 'src'
+        }
+	}
+	test {
+		java {
+		srcDir 'test'
+		}
+	}
+	
+}

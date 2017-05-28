@@ -1,0 +1,36 @@
+buildscript{
+    repositories{
+        jcenter()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+		
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src'
+		}
+		resources {
+            srcDir 'src'
+        }
+	}
+	test {
+		java {
+		srcDir 'test'
+		}
+	}
+	
+}

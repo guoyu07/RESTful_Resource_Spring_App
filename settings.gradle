@@ -1,4 +1,7 @@
 include ":EmployeeRepositoryService"
 include ":EmployeeServiceContract"
 include ":SpringREST"
+include ":SimpleRepositoryServiceContract"
+include ":SimpleRepositoryService"
+include ":QuartzJobSchedulerService"
 include ":SimpleSpringRestWAR"
