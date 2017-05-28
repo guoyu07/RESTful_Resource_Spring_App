@@ -36,3 +36,10 @@ QuartzJobSchedulerService
 SimpleRepositoryServiceContract
 
 SimpleRepositoryService
+
+
+**Updated: 29th May'17**
+
+Added 1 project to include authentication:
+
+AuthModule
