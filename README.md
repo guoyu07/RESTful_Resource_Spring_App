@@ -23,5 +23,16 @@ This is also a java project and it contains implementations of service interface
 
 
 Sample URLs: 
+
 http://localhost:8080/SimpleSpringRestWAR/restful/employee/all
 http://localhost:8080/SimpleSpringRestWAR/restful/employee/330211482
+
+**Updated: 28th May'17**
+
+Added 3 new projects to include quartz scheduler:
+
+QuartzJobSchedulerService
+
+SimpleRepositoryServiceContract
+
+SimpleRepositoryService
