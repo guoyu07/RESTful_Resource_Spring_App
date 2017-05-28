@@ -20,3 +20,8 @@ This is a java project which contains service contracts of EmployeeRepositorySer
 
 **4. EmployeeRepositoryService :**
 This is also a java project and it contains implementations of service interfaces defined in EmployeeServiceContract project. Apart from those it also contains DAO interfaces and DAO implementations (Repositories) used by service implementations. This project is also resuable.
+
+
+Sample URLs: 
+http://localhost:8080/SimpleSpringRestWAR/restful/employee/all
+http://localhost:8080/SimpleSpringRestWAR/restful/employee/330211482
