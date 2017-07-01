@@ -75,11 +75,13 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter{
 	private String userid;
 	@Value("${jdbc.password}")
 	private String passwod;
+	@Value("${jdbc.driverclassname}")
+	private String driverclassname;
 	
 	@Bean(name = "datasourceForAuth")
 	public DriverManagerDataSource dataSource() {
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-		driverManagerDataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		driverManagerDataSource.setDriverClassName(driverclassname);
 		driverManagerDataSource.setUrl(url);
 		driverManagerDataSource.setUsername(userid);
 		driverManagerDataSource.setPassword(passwod);
