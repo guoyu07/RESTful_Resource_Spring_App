@@ -40,6 +40,6 @@ SimpleRepositoryService
 
 **Updated: 29th May'17**
 
-Added 1 project to include authentication:
+Added 1 project to include authentication( http basic authentication mechanism is used here):
 
 AuthModule
